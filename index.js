@@ -24,7 +24,7 @@ app.use(require("express-session")({
 	secret: "I love kylie Jenner",
 	resave: false,
 	saveUninitialized: false
-})) 
+}));
 app.use(passport.initialize());
 app.use(passport.session()); 
 passport.use(new localStrategy(User.authenticate()));
@@ -39,6 +39,7 @@ app.use(function(req, res, next){
 app.use(blogRoutes);
 app.use(indexRoutes);
 
-app.listen(3000, function(){
+var port = process.env.PORT || 3000;
+app.listen(port, function(){
 	console.log("Server started on Port number 3000");
 });
