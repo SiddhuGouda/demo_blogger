@@ -1,0 +1,54 @@
+ <% include ./partials/header %>
+
+ <!-- Section: Blog v.1 -->
+<section class="my-5 container">
+
+  <!-- Section heading -->
+  <h2 class="h1-responsive font-weight-bold text-center my-5">Recent posts</h2>
+  <!-- Section description -->
+  <p class="text-center w-responsive mx-auto mb-5"></p>
+
+  <% blogs.forEach(function(blog){ %>
+  <!-- Grid row -->
+  <div class="row">
+
+    <!-- Grid column -->
+    <div class="col-lg-5">
+
+      <!-- Featured image -->
+      <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
+        <img class="img-fluid" src="<%= blog.image %>" alt="Sample image">
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-lg-7">
+
+      <!-- Category -->
+      <a href="#!" class="green-text"><h6 class="font-weight-bold mb-3"><i class="fa fa-cutlery pr-2"></i>Food</h6></a>
+      <!-- Post title -->
+      <h3 class="font-weight-bold mb-3"><strong><%= blog.title %></strong></h3>
+      <!-- Excerpt -->
+      <p><%= blog.body %></p>
+      <!-- Post data -->
+      <p>by <a><strong><%= blog.author.user %></strong></a>, <%= blog.created %></p>
+      <!-- Read more button -->
+      <a class="btn btn-success btn-md" href="/blogs/<%= blog._id %>">Read more</a>
+
+    </div>
+    <!-- Grid column -->
+
+  </div>
+  <!-- Grid row -->
+
+  <hr class="my-5">
+   <% }); %>
+
+  </section>
+
+ <% include ./partials/footer %>

@@ -1,0 +1,55 @@
+<% include ./partials/header-register %>
+
+  <!-- Full Page Intro -->
+    <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/89.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+      <!-- Mask & flexbox options-->
+      <div class="mask rgba-indigo-strong d-flex justify-content-center align-items-center">
+        <!-- Content -->
+        <div class="container">
+          <!--Grid row-->
+          <div class="row pt-lg-5 mt-lg-5">
+            <!--Grid column-->
+            <div class="col-md-12 col-xl-5 mb-4" style="margin: 0 auto;">
+              <!--Form-->
+              <div class="card wow fadeInRight" data-wow-delay="0.3s">
+                <div class="card-body z-depth-2">
+                  <!--Header-->
+                  <div class="text-center">
+                    <h3 class="dark-grey-text">
+                      <strong>Sign In</strong>
+                    </h3>
+                    <hr>
+                  </div>
+                  <form action="/login" method="POST">
+                  <!--Body-->
+                  <div class="md-form">
+                    <i class="fa fa-user prefix grey-text"></i>
+                    <input type="text" id="form3" class="form-control" name="username">
+                    <label for="form3">Your name</label>
+                  </div>
+                  <div class="md-form">
+                    <i class="fa fa-pencil prefix grey-text"></i>
+                    <input type="password" id="form2" class="form-control" name="password">
+                    <label for="form2">Your password</label>
+                  </div>
+                  <div class="text-center mt-3">
+                    <button class="btn btn-indigo" type="submit">Login</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+              <!--/.Form-->
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Content -->
+      </div>
+      <!-- Mask & flexbox options-->
+    </div>
+    <!-- Full Page Intro -->
+  </header>
+  <!-- Main navigation -->
+
+ <% include ./partials/footer %>
