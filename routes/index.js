@@ -4,8 +4,6 @@ var express    = require("express"),
     router     = express.Router(),
     nodeMailer = require("nodemailer");
 
-   
-
 router.get("/register", function(req, res){
    res.render("register");
 });
@@ -21,21 +19,34 @@ router.post("/register", function(req, res){
         }
         passport.authenticate("local")(req, res, function(){
           console.log("Authentication started");
+
+
+          //=======================================
+          /*
+            Here we are configuring our SMTP Server details.
+            SMTP is mail server which is responsible for sending and recieving email.
+          */
+          //=======================================
+
+          /*
           let transporter = nodeMailer.createTransport({
             host: 'smtp.gmail.com',
             port: 465,
             secure: true,
             auth: {
-                user: 'purplewebcreations@gmail.com',
-                pass: '59910113'
+                user: 'yourmailid@gmail.com',
+                pass: 'yourabovemailidpassword'
             }
         });
+
+        //=============================================================================
+           Change the above ID with your Gmail ID and Password start using mail feature
+        //==============================================================================
+
         let mailOptions = {
             from: '"Siddhu Gouda" <purplewebcreations@gmail.com>', // sender address
             to: email, // list of receivers
-            //subject: req.body.subject, // Subject line
-            //text: req.body.body, // plain text body
-            html: '<b>NodeJS Email Tutorial</b>' // html body
+            html: '<b>Enjoy Blogger and keep blogging</b>' // html body
         };
 
         transporter.sendMail(mailOptions, (error, info) => {
@@ -44,7 +55,11 @@ router.post("/register", function(req, res){
             }
             console.log('Message  sent:', email);
                 res.redirect('/blogs');
-            });    
+            }); 
+
+            */   
+
+            res.redirect('/blogs');
         });
        
 	});

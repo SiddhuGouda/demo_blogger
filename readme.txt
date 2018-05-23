@@ -5,7 +5,7 @@ Blog App with Login and Signup Functionality
            
 Unzip the cloned File and install all the dependencies 
 
-Install MongoDB Database locally on your LocalHost or you can also create an MLAB account online at  https://mlabs.org where you can create your own free NoSQL database.
+Install MongoDB Database locally on your LocalHost or you can also create an MLAB account online at  https://mlabs.com where you can create your own free NoSQL database.
 
 If you installed MongoDB locally then you can comment the line that uses MLAB for database connection in your Index.js(main File)
 or if you used mLAB to create the database then you need to comment the line that uses mongodb:localhost for connection.
