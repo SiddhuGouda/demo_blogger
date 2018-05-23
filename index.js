@@ -15,8 +15,8 @@
             indexRoutes    = require("./routes/index");             
             
 //Connect To Database
-mongoose.connect("mongodb://localhost/blog_demo");
-// mongoose.connect("mongodb://siddhu:kyliejenner@ds231090.mlab.com:31090/blog");
+// mongoose.connect("mongodb://localhost/blog_demo");
+mongoose.connect("mongodb://siddhu:kyliejenner@ds231090.mlab.com:31090/blog");
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
