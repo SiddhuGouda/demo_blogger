@@ -1,4 +1,5 @@
  <% include ./partials/header-register %>
+   
 
 <!-- Full Page Intro -->
   <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/89.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
@@ -28,13 +29,19 @@
                   <label for="form3">Your name</label>
                 </div>
                 <div class="md-form">
+                  <i class="fa fa-user prefix grey-text"></i>
+                  <input type="email" id="form4" class="form-control" name="email">
+                  <label for="form3">Your Email</label>
+                </div>
+                <div class="md-form">
                   <i class="fa fa-pencil prefix grey-text"></i>
                   <input type="password" id="form2" class="form-control" name="password">
                   <label for="form2">Your password</label>
                 </div>
                 <div class="text-center mt-3">
-                  <button class="btn btn-indigo" type="submit">register</button>
+                  <button class="btn btn-indigo" type="submit" id="register">register</button>
                 </div>
+                <span id="message"></span>
                 </form>
               </div>
             </div>
